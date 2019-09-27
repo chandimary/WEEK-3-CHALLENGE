@@ -1,0 +1,43 @@
+   
+<!DOCTYPE HTML>
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+ 
+<head>
+        
+   <title> array.html </title>
+   <div id="demo"></div>
+   <script type="text/javascript">
+var  arr1 = [4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f'];
+function arraySort(anArray) {
+    // var  arr1 = ([4, 9, 2, 3, 5, 1, 'd', 'a', 'c', 'f']);
+   var  obj = {odds:[],
+      evens:[],
+      chars:[]
+    }
+        for (i =0;i<anArray.length;i++) {
+          if (anArray[i] %2 == 0) {
+            obj.evens.push(anArray[i]); 
+       }else if(anArray[i]%2 == 1){
+        obj.odds.push(anArray[i]);
+      }else{
+        obj.chars.push(anArray[i]);
+       }
+     }
+     obj.evens.sort();
+     obj.odds.sort();
+     obj.chars.sort();
+     return obj;
+   
+ }
+var returnedvalue = arraySort(arr1);
+document.getElementById("demo").innerHTML="{'evens': ["+returnedvalue.evens+"], <br>odds: ["+returnedvalue.odds+"], <br>chars: ["+returnedvalue.chars+"] } ";
+</script>
+</head>
+    
+<body>
+        
+            
+</body>
+
+</html
